@@ -1,7 +1,7 @@
 {
-  "name": "poc-braze-shop-cart-reminder",
+  "name": "poc-swing-fastify",
   "version": "0.1.0",
-  "description": "does what the braze cart reminder webhook campaign does",
+  "description": "",
   "main": "dist/index.js",
   "engines": {
     "npm": ">=8.0.0 <9.0.0",
@@ -18,10 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.westwing.eu:martech-tribe/csmt/poc/poc-braze-shop-cart-reminder.git"
+    "url": "git@github.com:awiejacha/poc-swing-fastify.git"
   },
-  "author": "CSMT <csmt@westwing.de>",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "Adrian Wiejacha <adrian.wiejacha@gmail.com>",
+  "license": "BSD-3-Clause",
   "private": true,
   "dependencies": {
     "@fastify/autoload": "^5.0.0",
@@ -44,9 +44,5 @@
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
   },
-  "keywords": [
-    "csmt",
-    "braze",
-    "westwing"
-  ]
+  "keywords": []
 }
