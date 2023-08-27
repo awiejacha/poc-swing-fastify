@@ -1,0 +1,52 @@
+{
+  "name": "poc-braze-shop-cart-reminder",
+  "version": "0.1.0",
+  "description": "does what the braze cart reminder webhook campaign does",
+  "main": "dist/index.js",
+  "engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": ">=18.0.0 <19.0.0"
+  },
+  "scripts": {
+    "test": "echo \"No tests implemented so far\" && exit 1",
+    "start": "npm run build:ts && fastify start -l info dist/app.js",
+    "build:ts": "tsc",
+    "watch:ts": "tsc -w",
+    "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
+    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js",
+    "create": "npx fastify generate poc-braze-shop-cart-reminder --lang=ts --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.westwing.eu:martech-tribe/csmt/poc/poc-braze-shop-cart-reminder.git"
+  },
+  "author": "CSMT <csmt@westwing.de>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "dependencies": {
+    "@fastify/autoload": "^5.0.0",
+    "@fastify/helmet": "^10.1.1",
+    "@fastify/jwt": "^7.2.0",
+    "@fastify/sensible": "^5.0.0",
+    "fastify": "^4.0.0",
+    "fastify-plugin": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "fastify-cli": "^5.7.1",
+    "fastify-tsconfig": "^1.0.1",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "keywords": [
+    "csmt",
+    "braze",
+    "westwing"
+  ]
+}
