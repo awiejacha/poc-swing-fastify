@@ -1,4 +1,4 @@
-# poc-swing
+# poc-swing-fastify
 
 # Motivation
 
